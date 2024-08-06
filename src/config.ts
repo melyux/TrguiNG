@@ -163,6 +163,7 @@ interface Settings {
         progressbarStyle?: string, // deprecated
         animatedProgressbars: boolean,
         colorfulProgressbars: boolean,
+        colorfulPeers: boolean,
     },
     configVersion: number,
 }
@@ -287,6 +288,7 @@ const DefaultSettings: Settings = {
         },
         animatedProgressbars: true,
         colorfulProgressbars: false,
+        colorfulPeers: true,
     },
     // This field is used to verify config struct compatibility when importing settings
     // Bump this only when incompatible changes are made that cannot be imported into older

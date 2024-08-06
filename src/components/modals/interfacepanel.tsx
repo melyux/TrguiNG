@@ -36,6 +36,7 @@ export interface InterfaceFormValues {
         deleteTorrentData: DeleteTorrentDataOption,
         animatedProgressbars: boolean,
         colorfulProgressbars: boolean,
+        colorfulPeers: boolean,
         numLastSaveDirs: number,
         sortLastSaveDirs: boolean,
         preconfiguredLabels: string[],
@@ -155,6 +156,11 @@ export function InterfaceSettigsPanel<V extends InterfaceFormValues>(props: { fo
             <Grid.Col span={3}>
                 <Checkbox label="Animated"
                     {...props.form.getInputProps("interface.animatedProgressbars", { type: "checkbox" })} />
+            </Grid.Col>
+            <Grid.Col span={6}>Peers list</Grid.Col>
+            <Grid.Col span={3}>
+                <Checkbox label="Colorful"
+                    {...props.form.getInputProps("interface.colorfulPeers", { type: "checkbox" })} />
             </Grid.Col>
             <Grid.Col>
                 <MultiSelect
